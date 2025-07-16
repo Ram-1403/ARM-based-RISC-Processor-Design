@@ -1,0 +1,322 @@
+
+*** Running vivado
+    with args -log top.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source top.tcl -notrace
+
+
+
+****** Vivado v2024.2 (64-bit)
+  **** SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+  **** IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+  **** SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+  **** Start of session at: Fri Jun 13 00:59:58 2025
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source top.tcl -notrace
+Command: link_design -top top -part xc7a12ticsg325-1L
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xc7a12ticsg325-1L
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 511.102 ; gain = 0.000
+INFO: [Project 1-479] Netlist was created with Vivado 2024.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [C:/Users/DELL/arm_CPU_32bit/arm_CPU_32bit.srcs/constrs_1/new/data.xdc]
+CRITICAL WARNING: [Designutils 20-1307] Command 'E04F000F' is not supported in the xdc constraint file. [C:/Users/DELL/arm_CPU_32bit/arm_CPU_32bit.srcs/constrs_1/new/data.xdc:1]
+CRITICAL WARNING: [Designutils 20-1307] Command 'E2802005' is not supported in the xdc constraint file. [C:/Users/DELL/arm_CPU_32bit/arm_CPU_32bit.srcs/constrs_1/new/data.xdc:2]
+CRITICAL WARNING: [Designutils 20-1307] Command 'E280300C' is not supported in the xdc constraint file. [C:/Users/DELL/arm_CPU_32bit/arm_CPU_32bit.srcs/constrs_1/new/data.xdc:3]
+CRITICAL WARNING: [Designutils 20-1307] Command 'E2437009' is not supported in the xdc constraint file. [C:/Users/DELL/arm_CPU_32bit/arm_CPU_32bit.srcs/constrs_1/new/data.xdc:4]
+CRITICAL WARNING: [Designutils 20-1307] Command 'E1874002' is not supported in the xdc constraint file. [C:/Users/DELL/arm_CPU_32bit/arm_CPU_32bit.srcs/constrs_1/new/data.xdc:5]
+CRITICAL WARNING: [Designutils 20-1307] Command 'E0035004' is not supported in the xdc constraint file. [C:/Users/DELL/arm_CPU_32bit/arm_CPU_32bit.srcs/constrs_1/new/data.xdc:6]
+CRITICAL WARNING: [Designutils 20-1307] Command 'E0855004' is not supported in the xdc constraint file. [C:/Users/DELL/arm_CPU_32bit/arm_CPU_32bit.srcs/constrs_1/new/data.xdc:7]
+CRITICAL WARNING: [Designutils 20-1307] Command 'E0558007' is not supported in the xdc constraint file. [C:/Users/DELL/arm_CPU_32bit/arm_CPU_32bit.srcs/constrs_1/new/data.xdc:8]
+CRITICAL WARNING: [Designutils 20-1307] Command '0A00000C' is not supported in the xdc constraint file. [C:/Users/DELL/arm_CPU_32bit/arm_CPU_32bit.srcs/constrs_1/new/data.xdc:9]
+CRITICAL WARNING: [Designutils 20-1307] Command 'E0538004' is not supported in the xdc constraint file. [C:/Users/DELL/arm_CPU_32bit/arm_CPU_32bit.srcs/constrs_1/new/data.xdc:10]
+CRITICAL WARNING: [Designutils 20-1307] Command 'AA000000' is not supported in the xdc constraint file. [C:/Users/DELL/arm_CPU_32bit/arm_CPU_32bit.srcs/constrs_1/new/data.xdc:11]
+CRITICAL WARNING: [Designutils 20-1307] Command 'E2805000' is not supported in the xdc constraint file. [C:/Users/DELL/arm_CPU_32bit/arm_CPU_32bit.srcs/constrs_1/new/data.xdc:12]
+CRITICAL WARNING: [Designutils 20-1307] Command 'E0578002' is not supported in the xdc constraint file. [C:/Users/DELL/arm_CPU_32bit/arm_CPU_32bit.srcs/constrs_1/new/data.xdc:13]
+CRITICAL WARNING: [Designutils 20-1307] Command 'B2857001' is not supported in the xdc constraint file. [C:/Users/DELL/arm_CPU_32bit/arm_CPU_32bit.srcs/constrs_1/new/data.xdc:14]
+CRITICAL WARNING: [Designutils 20-1307] Command 'E0477002' is not supported in the xdc constraint file. [C:/Users/DELL/arm_CPU_32bit/arm_CPU_32bit.srcs/constrs_1/new/data.xdc:15]
+CRITICAL WARNING: [Designutils 20-1307] Command 'E5837054' is not supported in the xdc constraint file. [C:/Users/DELL/arm_CPU_32bit/arm_CPU_32bit.srcs/constrs_1/new/data.xdc:16]
+CRITICAL WARNING: [Designutils 20-1307] Command 'E5902060' is not supported in the xdc constraint file. [C:/Users/DELL/arm_CPU_32bit/arm_CPU_32bit.srcs/constrs_1/new/data.xdc:17]
+CRITICAL WARNING: [Designutils 20-1307] Command 'E08FF000' is not supported in the xdc constraint file. [C:/Users/DELL/arm_CPU_32bit/arm_CPU_32bit.srcs/constrs_1/new/data.xdc:18]
+CRITICAL WARNING: [Designutils 20-1307] Command 'E2802001' is not supported in the xdc constraint file. [C:/Users/DELL/arm_CPU_32bit/arm_CPU_32bit.srcs/constrs_1/new/data.xdc:19]
+CRITICAL WARNING: [Designutils 20-1307] Command 'EA000001' is not supported in the xdc constraint file. [C:/Users/DELL/arm_CPU_32bit/arm_CPU_32bit.srcs/constrs_1/new/data.xdc:20]
+CRITICAL WARNING: [Designutils 20-1307] Command 'E280200D' is not supported in the xdc constraint file. [C:/Users/DELL/arm_CPU_32bit/arm_CPU_32bit.srcs/constrs_1/new/data.xdc:21]
+CRITICAL WARNING: [Designutils 20-1307] Command 'E280200A' is not supported in the xdc constraint file. [C:/Users/DELL/arm_CPU_32bit/arm_CPU_32bit.srcs/constrs_1/new/data.xdc:22]
+CRITICAL WARNING: [Designutils 20-1307] Command 'E5802054' is not supported in the xdc constraint file. [C:/Users/DELL/arm_CPU_32bit/arm_CPU_32bit.srcs/constrs_1/new/data.xdc:23]
+Finished Parsing XDC File [C:/Users/DELL/arm_CPU_32bit/arm_CPU_32bit.srcs/constrs_1/new/data.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 628.254 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+5 Infos, 0 Warnings, 23 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 628.254 ; gain = 301.840
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a12ti'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a12ti'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 636.449 ; gain = 8.195
+
+Starting Cache Timing Information Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Cache Timing Information Task | Checksum: 146c93035
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1112.117 ; gain = 475.668
+
+Starting Logic Optimization Task
+
+Phase 1 Initialization
+
+Phase 1.1 Core Generation And Design Setup
+Phase 1.1 Core Generation And Design Setup | Checksum: 146c93035
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1513.262 ; gain = 0.000
+
+Phase 1.2 Setup Constraints And Sort Netlist
+Phase 1.2 Setup Constraints And Sort Netlist | Checksum: 146c93035
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 1513.262 ; gain = 0.000
+Phase 1 Initialization | Checksum: 146c93035
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 1513.262 ; gain = 0.000
+
+Phase 2 Timer Update And Timing Data Collection
+
+Phase 2.1 Timer Update
+Phase 2.1 Timer Update | Checksum: 146c93035
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.025 . Memory (MB): peak = 1513.262 ; gain = 0.000
+
+Phase 2.2 Timing Data Collection
+Phase 2.2 Timing Data Collection | Checksum: 146c93035
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.045 . Memory (MB): peak = 1513.262 ; gain = 0.000
+Phase 2 Timer Update And Timing Data Collection | Checksum: 146c93035
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.046 . Memory (MB): peak = 1513.262 ; gain = 0.000
+
+Phase 3 Retarget
+INFO: [Opt 31-1851] Number of loadless carry chains removed were: 0
+INFO: [Opt 31-1834] Total Chains To Be Transformed Were: 0 AND Number of Transformed insts Created are: 0
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 3 Retarget | Checksum: 146c93035
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.073 . Memory (MB): peak = 1513.262 ; gain = 0.000
+Retarget | Checksum: 146c93035
+INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 0 cells
+
+Phase 4 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 4 Constant propagation | Checksum: 146c93035
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.077 . Memory (MB): peak = 1513.262 ; gain = 0.000
+Constant propagation | Checksum: 146c93035
+INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
+
+Phase 5 Sweep
+INFO: [Constraints 18-11670] Building netlist checker database with flags, 0x8
+Done building netlist checker database: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1513.262 ; gain = 0.000
+Phase 5 Sweep | Checksum: 146c93035
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.088 . Memory (MB): peak = 1513.262 ; gain = 0.000
+Sweep | Checksum: 146c93035
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 0 cells
+
+Phase 6 BUFG optimization
+Phase 6 BUFG optimization | Checksum: 146c93035
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.137 . Memory (MB): peak = 1513.262 ; gain = 0.000
+BUFG optimization | Checksum: 146c93035
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 7 Shift Register Optimization
+INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
+Phase 7 Shift Register Optimization | Checksum: 146c93035
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.141 . Memory (MB): peak = 1513.262 ; gain = 0.000
+Shift Register Optimization | Checksum: 146c93035
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 8 Post Processing Netlist
+Phase 8 Post Processing Netlist | Checksum: 146c93035
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.143 . Memory (MB): peak = 1513.262 ; gain = 0.000
+Post Processing Netlist | Checksum: 146c93035
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+
+Phase 9 Finalization
+
+Phase 9.1 Finalizing Design Cores and Updating Shapes
+Phase 9.1 Finalizing Design Cores and Updating Shapes | Checksum: 146c93035
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.146 . Memory (MB): peak = 1513.262 ; gain = 0.000
+
+Phase 9.2 Verifying Netlist Connectivity
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 1513.262 ; gain = 0.000
+Phase 9.2 Verifying Netlist Connectivity | Checksum: 146c93035
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.165 . Memory (MB): peak = 1513.262 ; gain = 0.000
+Phase 9 Finalization | Checksum: 146c93035
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.165 . Memory (MB): peak = 1513.262 ; gain = 0.000
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |               0  |               0  |                                              0  |
+|  Constant propagation         |               0  |               0  |                                              0  |
+|  Sweep                        |               0  |               0  |                                              0  |
+|  BUFG optimization            |               0  |               0  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                              0  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+Ending Logic Optimization Task | Checksum: 146c93035
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.170 . Memory (MB): peak = 1513.262 ; gain = 0.000
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+Ending Power Optimization Task | Checksum: 146c93035
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.039 . Memory (MB): peak = 1513.262 ; gain = 0.000
+
+Starting Final Cleanup Task
+Ending Final Cleanup Task | Checksum: 146c93035
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1513.262 ; gain = 0.000
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1513.262 ; gain = 0.000
+Ending Netlist Obfuscation Task | Checksum: 146c93035
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1513.262 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+25 Infos, 0 Warnings, 23 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1513.262 ; gain = 885.008
+INFO: [Vivado 12-24828] Executing command : report_drc -file top_drc_opted.rpt -pb top_drc_opted.pb -rpx top_drc_opted.rpx
+Command: report_drc -file top_drc_opted.rpt -pb top_drc_opted.pb -rpx top_drc_opted.rpx
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2024.2/data/ip'.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file C:/Users/DELL/arm_CPU_32bit/arm_CPU_32bit.runs/impl_1/top_drc_opted.rpt.
+report_drc completed successfully
+INFO: [Timing 38-480] Writing timing data to binary archive.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/DELL/arm_CPU_32bit/arm_CPU_32bit.runs/impl_1/top_opt.dcp' has been generated.
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a12ti'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a12ti'
+INFO: [Common 17-83] Releasing license: Implementation
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 2 CPUs
+
+Starting Placer Task
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1520.734 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 6dca4706
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 1520.734 ; gain = 0.000
+Phase 1 Placer Initialization | Checksum: 6dca4706
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.030 . Memory (MB): peak = 1520.734 ; gain = 0.000
+ERROR: [Place 30-494] The design is empty
+Resolution: Check if opt_design has removed all the leaf cells of your design.  Check whether you have instantiated and connected all of the top level ports.
+Ending Placer Task | Checksum: 6dca4706
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.034 . Memory (MB): peak = 1520.734 ; gain = 0.000
+42 Infos, 0 Warnings, 23 Critical Warnings and 2 Errors encountered.
+place_design failed
+ERROR: [Common 17-69] Command failed: Placer could not place all instances
+INFO: [Common 17-206] Exiting Vivado at Fri Jun 13 01:00:29 2025...
+
+*** Running vivado
+    with args -log top.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source top.tcl -notrace
+
+
+WARNING: Default location for XILINX_HLS not found
+
+****** Vivado v2024.2 (64-bit)
+  **** SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+  **** IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+  **** SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+  **** Start of session at: Wed Jul 16 22:54:33 2025
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source top.tcl -notrace
+Command: open_checkpoint top_opt.dcp
+INFO: [Device 21-403] Loading part xc7a12ticsg325-1L
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 511.633 ; gain = 0.000
+INFO: [Project 1-479] Netlist was created with Vivado 2024.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1108.852 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Project 1-604] Checkpoint was created with Vivado v2024.2 (64-bit) build 5239630
+open_checkpoint: Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 1108.852 ; gain = 827.230
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a12ti'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a12ti'
+INFO: [Common 17-83] Releasing license: Implementation
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 2 CPUs
+
+Starting Placer Task
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1133.219 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 6dca4706
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1133.219 ; gain = 0.000
+Phase 1 Placer Initialization | Checksum: 6dca4706
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 1133.219 ; gain = 0.000
+ERROR: [Place 30-494] The design is empty
+Resolution: Check if opt_design has removed all the leaf cells of your design.  Check whether you have instantiated and connected all of the top level ports.
+Ending Placer Task | Checksum: 6dca4706
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 1133.219 ; gain = 0.000
+18 Infos, 0 Warnings, 0 Critical Warnings and 2 Errors encountered.
+place_design failed
+ERROR: [Common 17-69] Command failed: Placer could not place all instances
+INFO: [Common 17-206] Exiting Vivado at Wed Jul 16 22:54:56 2025...
