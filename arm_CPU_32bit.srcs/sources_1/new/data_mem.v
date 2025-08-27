@@ -22,7 +22,8 @@
 
 module data_mem( input clk , enable_write,
 input [31:0]address,write_data,
-output [31:0] read_data
+output [31:0] read_data,
+ output [31:0] debug_ram21 
     );
     reg [31:0] RAM[63:0];
     always@(posedge clk)
@@ -32,5 +33,5 @@ output [31:0] read_data
     end 
     
     assign read_data = RAM[address[31:2]];
-    
+     assign debug_ram21 = RAM[21];  // Direct assignment
 endmodule

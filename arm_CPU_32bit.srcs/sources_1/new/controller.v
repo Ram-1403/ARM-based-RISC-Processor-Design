@@ -28,7 +28,7 @@
     );
    wire regW,memW,pcs;
    wire[1:0] flagW;
-   decoder deccoder(instr[27:26] ,instr[25:0] ,instr[15:12], regW,memW,mem_to_reg,alu_src,imm_src,
+   decoder deccoder(instr[27:26] ,instr[25:20] ,instr[15:12], regW,memW,mem_to_reg,alu_src,imm_src,
     reg_src,alu_control,flagW, pcs);
     conditional_logic cond_logic(clk,reset, instr[31:28],alu_flag,flagW, regW,memW,pcs,pc_src,reg_write,mem_write);
     

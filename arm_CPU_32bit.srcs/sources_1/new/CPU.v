@@ -22,7 +22,7 @@
 
 module CPU(input clk , reset ,
 input [31:0]instr , read_data,
-output pc, alu_result,write_data,
+output[31:0] pc, alu_result,write_data,    //change in pc width
 output mem_write
     );
     wire [1:0] reg_src, imm_src,alu_control;

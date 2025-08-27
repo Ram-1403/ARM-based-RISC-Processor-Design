@@ -26,7 +26,7 @@ output [31:0] read_data
     reg [31:0] ROM[63:0];   // 64 block of each 32 bit 
     assign read_data = ROM[address[31:2]];
     initial begin 
-    $readmemh("data.xdc", ROM);
+    $readmemh("memfile.data", ROM);
     end 
     
 endmodule

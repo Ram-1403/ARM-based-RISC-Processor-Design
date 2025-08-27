@@ -56,12 +56,12 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param synth.incrementalSynthesisCache C:/Users/DELL/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-5664-RAM/incrSyn
+set_param chipscope.maxJobs 2
 set_param checkpoint.writeSynthRtdsInDcp 1
 set_msg_config -id {Synth 8-256} -limit 10000
 set_msg_config -id {Synth 8-638} -limit 10000
 OPTRACE "Creating in-memory project" START { }
-create_project -in_memory -part xc7a12ticsg325-1L
+create_project -in_memory -part xc7a100tcsg324-1
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
@@ -70,10 +70,13 @@ set_property webtalk.parent_dir C:/Users/DELL/arm_CPU_32bit/arm_CPU_32bit.cache/
 set_property parent.project_path C:/Users/DELL/arm_CPU_32bit/arm_CPU_32bit.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
+set_property board_part_repo_paths {C:/Users/DELL/AppData/Roaming/Xilinx/Vivado/2024.2/xhub/board_store/xilinx_board_store} [current_project]
+set_property board_part digilentinc.com:nexys-a7-100t:part0:1.2 [current_project]
 set_property ip_output_repo c:/Users/DELL/arm_CPU_32bit/arm_CPU_32bit.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
+read_mem C:/Users/DELL/arm_CPU_32bit/arm_CPU_32bit.srcs/sources_1/imports/Downloads/memfile.data
 read_verilog -library xil_defaultlib {
   C:/Users/DELL/arm_CPU_32bit/arm_CPU_32bit.srcs/sources_1/new/CPU.v
   C:/Users/DELL/arm_CPU_32bit/arm_CPU_32bit.srcs/sources_1/new/adder.v
@@ -99,14 +102,16 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/Users/DELL/arm_CPU_32bit/arm_CPU_32bit.srcs/constrs_1/new/data.xdc
-set_property used_in_implementation false [get_files C:/Users/DELL/arm_CPU_32bit/arm_CPU_32bit.srcs/constrs_1/new/data.xdc]
+read_xdc C:/Users/DELL/arm_CPU_32bit/arm_CPU_32bit.srcs/constrs_1/new/nexys_A7_arm32_const.xdc
+set_property used_in_implementation false [get_files C:/Users/DELL/arm_CPU_32bit/arm_CPU_32bit.srcs/constrs_1/new/nexys_A7_arm32_const.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
+
+read_checkpoint -auto_incremental -incremental C:/Users/DELL/arm_CPU_32bit/arm_CPU_32bit.srcs/utils_1/imports/synth_1/top.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }
-synth_design -top top -part xc7a12ticsg325-1L
+synth_design -top top -part xc7a100tcsg324-1
 OPTRACE "synth_design" END { }
 if { [get_msg_config -count -severity {CRITICAL WARNING}] > 0 } {
  send_msg_id runtcl-6 info "Synthesis results are not added to the cache due to CRITICAL_WARNING"

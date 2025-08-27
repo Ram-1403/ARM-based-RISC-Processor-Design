@@ -1,0 +1,33 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/DELL/arm_CPU_32bit/arm_CPU_32bit.srcs/sources_1/new/CPU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CPU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/DELL/arm_CPU_32bit/arm_CPU_32bit.srcs/sources_1/new/adder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/DELL/arm_CPU_32bit/arm_CPU_32bit.srcs/sources_1/new/alu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/DELL/arm_CPU_32bit/arm_CPU_32bit.srcs/sources_1/new/conditional_logic.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module conditional_logic
+INFO: [VRFC 10-311] analyzing module cond_checker
+INFO: [VRFC 10-311] analyzing module ff_2bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/DELL/arm_CPU_32bit/arm_CPU_32bit.srcs/sources_1/new/controller.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module controller
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/DELL/arm_CPU_32bit/arm_CPU_32bit.srcs/sources_1/new/data_mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module data_mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/DELL/arm_CPU_32bit/arm_CPU_32bit.srcs/sources_1/new/data_path_.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module data_path_
+WARNING: [VRFC 10-9336] redeclaration of ANSI port 'alu_result' is not allowed [C:/Users/DELL/arm_CPU_32bit/arm_CPU_32bit.srcs/sources_1/new/data_path_.v:31]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/DELL/arm_CPU_32bit/arm_CPU_32bit.srcs/sources_1/new/decoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module decoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/DELL/arm_CPU_32bit/arm_CPU_32bit.srcs/sources_1/new/extender.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module extender
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/DELL/arm_CPU_32bit/arm_CPU_32bit.srcs/sources_1/new/flop.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module flop
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/DELL/arm_CPU_32bit/arm_CPU_32bit.srcs/sources_1/new/instr_mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module instr_mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/DELL/arm_CPU_32bit/arm_CPU_32bit.srcs/sources_1/new/mux2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux2
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/DELL/arm_CPU_32bit/arm_CPU_32bit.srcs/sources_1/new/regfile.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regfile
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/DELL/arm_CPU_32bit/arm_CPU_32bit.srcs/sources_1/new/top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/DELL/arm_CPU_32bit/arm_CPU_32bit.srcs/sim_1/new/testbench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench
