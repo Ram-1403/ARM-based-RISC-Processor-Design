@@ -1,4 +1,4 @@
-# ARM-Compatible 32-Bit Single-Cycle RISC Processor
+# ARM-Based 32-Bit Single-Cycle RISC Processor
 ### *A Comprehensive Implementation in Verilog HDL for Educational and Research Applications*
 
 <div align="center">
@@ -8,7 +8,7 @@
 [![Synthesis](https://img.shields.io/badge/Synthesis-Optimized-green?style=flat-square)](./implementation/)
 [![License](https://img.shields.io/badge/License-MIT-yellow?style=flat-square)](./LICENSE)
 
-**Platform:** Xilinx Artix-7 (Nexys A7-100T) | **Language:** Verilog HDL | **Architecture:** 32-bit ARM-Compatible RISC
+**Platform:** Xilinx Artix-7 (Nexys A7-100T) | **Language:** Verilog HDL | **Architecture:** 32-bit ARM-Based RISC
 
 </div>
 
@@ -16,7 +16,7 @@
 
 ## Executive Summary
 
-This project presents a fully functional **32-bit ARM-compatible single-cycle RISC processor** implemented in Verilog HDL. The design emphasizes educational clarity while maintaining professional implementation standards suitable for FPGA deployment. The processor successfully executes a comprehensive subset of ARM instructions including data processing, memory access, and control flow operations with full conditional execution support.
+This project presents a fully functional **32-bit ARM-based single-cycle RISC processor** implemented in Verilog HDL. The design emphasizes educational clarity while maintaining professional implementation standards suitable for FPGA deployment. The processor successfully executes a comprehensive subset of ARM instructions including data processing, memory access, and control flow operations with full conditional execution support.
 
 ### Key Achievements
 - ✅ **Functional Verification**: Complete instruction set validation through comprehensive testbenches
@@ -47,7 +47,7 @@ The processor implements a **Harvard architecture** with separate instruction an
 </tr>
 <tr>
 <td>Architecture</td>
-<td>32-bit ARM-compatible RISC</td>
+<td>32-bit ARM-based RISC</td>
 <td>Pipeline Depth</td>
 <td>Single-cycle (1 stage)</td>
 </tr>
@@ -330,7 +330,7 @@ The single-cycle design achieves predictable performance with the following timi
 | Resource Utilization | 2% LUT | 15-25% LUT |
 | Maximum Frequency | 66.7 MHz | 25-50 MHz |
 | Power Consumption | 0.128W | 0.5-1.0W |
-| Instruction Set | ARM-compatible | Custom/Simplified |
+| Instruction Set | ARM-based | Custom/Simplified |
 
 ---
 
@@ -420,7 +420,7 @@ This project is released under the MIT License, enabling free use, modification,
 If you use this processor in academic work, please cite:
 ```bibtex
 @misc{arm32_educational_processor,
-    title={ARM-Compatible 32-Bit Single-Cycle RISC Processor},
+    title={ARM-Based 32-Bit Single-Cycle RISC Processor},
     author={[Your Name]},
     year={2025},
     publisher={GitHub},
