@@ -118,42 +118,195 @@ Power-efficient design with comprehensive power breakdown:
 
 ---
 
-## Detailed Module Architecture
+## System Architecture Flow
 
-### System Hierarchy
+### Processor Module Interconnection Flowchart
 
 ```
-ARM32_Processor/
-│
-├── 🔝 Top-Level Integration
-│   └── top.v                     ── System wrapper with FPGA interfaces
-│
-├── 🧠 Core Processing Unit  
-│   ├── CPU.v                     ── Main processor integration
-│   ├── controller.v              ── Central control unit
-│   └── decoder.v                 ── Instruction decode logic
-│
-├── 🛣️ Datapath Components
-│   ├── data_path.v              ── Complete execution datapath
-│   ├── alu.v                    ── Arithmetic Logic Unit
-│   ├── regfile.v                ── 16×32-bit register file
-│   ├── adder.v                  ── Address calculation units
-│   ├── mux2.v                   ── Multiplexer networks
-│   ├── extender.v               ── Immediate value processing
-│   └── flop.v                   ── Program counter register
-│
-├── ⚖️ Control Logic
-│   └── conditional_logic.v       ── ARM conditional execution
-│
-├── 💾 Memory Subsystem
-│   ├── instr_mem.v              ── Instruction ROM (64×32)
-│   └── data_mem.v               ── Data RAM (64×32)
-│
-└── 🔬 Verification Environment
-    ├── testbench.v              ── Comprehensive test suite
-    ├── memfile.data             ── Test program binary
-    └── nexys_A7_arm32_const.xdc ── FPGA pin assignments
+                            🔝 FPGA Interface Layer
+                        ┌─────────────────────────────┐
+                        │         top.v               │
+                        │   System Integration        │
+                        └──────────┬──────────────────┘
+                                   │ clk, reset, debug signals
+                                   ▼
+                     ┌─────────────────────────────────────┐
+                     │            🧠 CPU.v                 │
+                     │      Main Processor Core            │
+                     └──────┬─────────────┬────────────────┘
+                            │             │
+                ┌───────────▼──┐      ┌───▼─────────────┐
+                │  🎮 Control  │      │  🛣️ Datapath   │
+                │    Unit      │◄────►│    Engine       │
+                └─────┬────────┘      └─────────────────┘
+                      │
+            ┌─────────▼──────────────────────────────────────────┐
+            │                🎛️ Control Pipeline                │
+            │                                                   │
+            │  ┌──────────────┐    ┌──────────────────────────┐  │
+            │  │  decoder.v   │    │   conditional_logic.v   │  │
+            │  │ Instruction  │───►│   ARM Conditional        │  │
+            │  │   Decoder    │    │     Execution            │  │
+            │  └──────────────┘    └──────────────────────────┘  │
+            └───────────────────────────────────────────────────┘
+                      │
+                      │ Control Signals
+                      ▼
+    ┌─────────────────────────────────────────────────────────────┐
+    │                   🛣️ Execution Datapath                    │
+    │                                                             │
+    │  ┌─────────────┐    ┌─────────────┐    ┌─────────────────┐  │
+    │  │   flop.v    │───►│   adder.v   │───►│     mux2.v      │  │
+    │  │Program Counter│   │PC Increment │    │   Control       │  │
+    │  │   Register    │   │   Logic     │    │ Multiplexers    │  │
+    │  └─────────────┘    └─────────────┘    └─────────────────┘  │
+    │           │                                        │        │
+    │           ▼                                        ▼        │
+    │  ┌─────────────┐    ┌─────────────┐    ┌─────────────────┐  │
+    │  │  regfile.v  │◄──►│    alu.v    │◄──►│   extender.v    │  │
+    │  │16×32 Register│   │Arithmetic   │    │   Immediate     │  │
+    │  │    File      │   │Logic Unit   │    │   Processing    │  │
+    │  └─────────────┘    └─────────────┘    └─────────────────┘  │
+    └─────────────────────────────────────────────────────────────┘
+                      │
+                      │ Memory Interface
+                      ▼
+    ┌─────────────────────────────────────────────────────────────┐
+    │                   💾 Memory Subsystem                       │
+    │                                                             │
+    │  ┌──────────────────────┐    ┌────────────────────────────┐ │
+    │  │     instr_mem.v      │    │        data_mem.v          │ │
+    │  │   Instruction ROM    │    │       Data RAM             │ │
+    │  │     (64×32-bit)      │    │     (64×32-bit)            │ │
+    │  │                      │    │   Byte Addressable         │ │
+    │  └──────────────────────┘    └────────────────────────────┘ │
+    └─────────────────────────────────────────────────────────────┘
+                      │
+                      │ Debug & Verification
+                      ▼
+    ┌─────────────────────────────────────────────────────────────┐
+    │               🔬 Verification Environment                    │
+    │                                                             │
+    │  ┌──────────────────────┐    ┌────────────────────────────┐ │
+    │  │    testbench.v       │    │  nexys_A7_arm32_const.xdc │ │
+    │  │ Comprehensive Test   │    │     FPGA Constraints       │ │
+    │  │      Suite           │    │    Pin Assignments         │ │
+    │  └──────────────────────┘    └────────────────────────────┘ │
+    │                     │                                       │
+    │              ┌──────▼─────────────┐                        │
+    │              │   memfile.data     │                        │
+    │              │  Test Program      │                        │
+    │              │   Binary Image     │                        │
+    │              └────────────────────┘                        │
+    └─────────────────────────────────────────────────────────────┘
+
+            Data Flow:  ◄──► Bidirectional    ───► Unidirectional
+            Control:    ▲ ▼  Control Signals   │    Data Path
 ```
+
+### Module Function and Interconnection Summary
+
+<table>
+<tr>
+<th><b>🎯 Layer</b></th>
+<th><b>📄 Module</b></th>
+<th><b>🔗 Function</b></th>
+<th><b>⚡ Key Interfaces</b></th>
+</tr>
+<tr>
+<td rowspan="1"><b>🔝 System</b></td>
+<td><code>top.v</code></td>
+<td>FPGA integration & I/O mapping</td>
+<td>Clock, Reset, LED outputs</td>
+</tr>
+<tr>
+<td rowspan="1"><b>🧠 Core</b></td>
+<td><code>CPU.v</code></td>
+<td>Processor integration wrapper</td>
+<td>Instruction/Data buses</td>
+</tr>
+<tr>
+<td rowspan="2"><b>🎮 Control</b></td>
+<td><code>controller.v</code></td>
+<td>Central control orchestration</td>
+<td>Control signal generation</td>
+</tr>
+<tr>
+<td><code>decoder.v</code></td>
+<td>Instruction decode & control logic</td>
+<td>Opcode → Control signals</td>
+</tr>
+<tr>
+<td rowspan="1"><b>⚖️ Conditional</b></td>
+<td><code>conditional_logic.v</code></td>
+<td>ARM condition code evaluation</td>
+<td>Flag processing & gating</td>
+</tr>
+<tr>
+<td rowspan="6"><b>🛣️ Datapath</b></td>
+<td><code>data_path.v</code></td>
+<td>Main execution datapath</td>
+<td>All internal data flows</td>
+</tr>
+<tr>
+<td><code>alu.v</code></td>
+<td>Arithmetic & logic operations</td>
+<td>Source operands → Results+Flags</td>
+</tr>
+<tr>
+<td><code>regfile.v</code></td>
+<td>16×32-bit register storage</td>
+<td>Read/Write ports & PC handling</td>
+</tr>
+<tr>
+<td><code>adder.v</code></td>
+<td>Address increment logic</td>
+<td>PC+4, PC+8 calculations</td>
+</tr>
+<tr>
+<td><code>mux2.v</code></td>
+<td>Data path selection</td>
+<td>Source/destination routing</td>
+</tr>
+<tr>
+<td><code>extender.v</code></td>
+<td>Immediate value processing</td>
+<td>Sign extension & formatting</td>
+</tr>
+<tr>
+<td rowspan="1"><b>🔄 Storage</b></td>
+<td><code>flop.v</code></td>
+<td>Program counter register</td>
+<td>Clock-based PC storage</td>
+</tr>
+<tr>
+<td rowspan="2"><b>💾 Memory</b></td>
+<td><code>instr_mem.v</code></td>
+<td>Instruction ROM (64×32)</td>
+<td>PC → Instruction fetch</td>
+</tr>
+<tr>
+<td><code>data_mem.v</code></td>
+<td>Data RAM (64×32)</td>
+<td>Load/Store operations</td>
+</tr>
+<tr>
+<td rowspan="3"><b>🔬 Verification</b></td>
+<td><code>testbench.v</code></td>
+<td>Functional verification</td>
+<td>System-level testing</td>
+</tr>
+<tr>
+<td><code>memfile.data</code></td>
+<td>Test program storage</td>
+<td>Hex instruction sequence</td>
+</tr>
+<tr>
+<td><code>*.xdc</code></td>
+<td>FPGA pin constraints</td>
+<td>Hardware mapping rules</td>
+</tr>
+</table>
 
 ---
 
