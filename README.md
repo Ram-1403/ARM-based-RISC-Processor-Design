@@ -156,7 +156,7 @@ Format: <operation><condition> <Rd>, <Rn>, #<immediate>
 Examples:
 - ADD  R1, R2, #10   ; R1 = R2 + 10
 - SUB  R3, R4, #5    ; R3 = R4 - 5
-- MOV  R5, #15       ; R5 = 15
+
 ```
 
 #### Data Processing Instruction Format
