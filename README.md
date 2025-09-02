@@ -119,7 +119,7 @@ The processor implements a 16-register file (R0-R15) following ARM conventions:
 - **R15**: Program Counter (PC) with special ARM behavior
 
 **R15 (PC) Special Behavior:**
-- Contains current instruction address + 8 (ARM 3-stage pipeline offset)
+- Contains current instruction address + 8 
 - Used for branch target calculations: Target = PC + 8 + (signed_offset << 2)
 - Automatically updated for sequential execution
 - Modified by branch instructions and PC-relative operations
