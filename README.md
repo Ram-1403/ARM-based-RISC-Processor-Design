@@ -161,19 +161,19 @@ Examples:
 
 #### Data Processing Instruction Format
 ```
-┌─────────┬─────┬─┬─┬─────┬─────────┬─────────┬────────────────┐
-│ Cond    │ 00  │I│S│ Cmd │ Rn      │ Rd      │ Src2           │
-│ [31:28] │     │ │ │[24:21]│[19:16]│ [15:12] │ [11:0]         │
-└─────────┴─────┴─┴─┴─────┴─────────┴─────────┴────────────────┘
+┌─────────┬─────┬─┬─────┬─┬─────────┬─────────┬────────────────┐
+│ Cond │ 00 │I│ Cmd │S│ Rn │ Rd │ Src2 │
+│ [31:28] │ │ │[24:21]│ │ [19:16] │ [15:12] │ [11:0] │
+└─────────┴─────┴─┴─────┴─┴─────────┴─────────┴────────────────┘
 
-Cond    : 4-bit condition code
-I       : Immediate flag (0=register, 1=immediate)
-S       : Set condition codes flag  
-Cmd     : 4-bit operation code
-         0100 = ADD, 0010 = SUB, 0000 = AND, 1100 = ORR
-Rn      : First source register [19:16]
-Rd      : Destination register [15:12]
-Src2    : Second operand - 8-bit immediate or register
+Cond : 4-bit condition code
+I : Immediate flag (0=register, 1=immediate)
+Cmd : 4-bit operation code
+0100 = ADD, 0010 = SUB, 0000 = AND, 1100 = ORR
+S : Set condition codes flag
+Rn : First source register [19:16]
+Rd : Destination register [15:12]
+Src2 : Second operand - 8-bit immediate or register
 ```
 
 ### 2. Memory Access Instructions
