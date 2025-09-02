@@ -110,7 +110,7 @@ Based on ARM documentation, the processor supports all 15 standard ARM condition
 #### Example Conditional Instructions
 - `ADDLT R1, R2, R3` - Add if Less Than (N≠V)
 - `SUBGE R4, R5, #10` - Subtract if Greater or Equal (N=V)  
-- `MOVNE R6, #0` - Move if Not Equal (Z=0)
+
 
 ### Register File and PC Handling
 
