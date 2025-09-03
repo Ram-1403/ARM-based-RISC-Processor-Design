@@ -221,11 +221,10 @@ Examples:
 
 #### Branch Instruction Format
 ```
-┌─────────┬─────┬───────────────────────────────────────────┐
-│ Cond    │ 10  │ Signed Offset                             │
-│ [31:28] │     │ [23:0]                                    │
-└─────────┴─────┴───────────────────────────────────────────┘
-
+┌────────┬─────┬─┬─┬───────────────────────────────────────┐
+│ Cond   │ 10  │1│L│      Signed Offset (imm24)            │
+│ [31:28]|[27:26]│ │        [23:0]                         │
+└────────┴─────┴─┴─┴───────────────────────────────────────┘
 Cond          : 4-bit condition code
 Signed Offset : 24-bit signed word offset (sign-extended and shifted left by 2)
 Target Address: PC + 8 + (SignExtend(offset) << 2)
