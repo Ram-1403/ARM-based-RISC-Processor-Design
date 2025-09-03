@@ -61,7 +61,7 @@ The processor implements a **Harvard architecture** with separate instruction an
 <td>Memory Model</td>
 <td>Harvard (separate I/D)</td>
 <td>Address Space</td>
-<td>32-bit addressable</td>
+<td>64 words each (I/D)</td>
 </tr>
 <tr>
 <td>Instruction Memory</td>
