@@ -259,30 +259,30 @@ Based on your instruction memory, here's the complete program execution:
 
 **Instruction Memory Contents (memfile.data):**
 ```
-Address  Hex Code   Assembly Instruction              Register Updates & Comments
-0x00:    E04F000F   MOV R0, #15                      ; R0 = 15
-0x04:    E2802005   ADD R2, R0, #5                   ; R2 = 15 + 5 = 20  
-0x08:    E280300C   ADD R3, R0, #12                  ; R3 = 15 + 12 = 27
-0x0C:    E2437009   SUB R7, R3, #9                   ; R7 = 27 - 9 = 18
-0x10:    E1874002   ORR R4, R7, R2                   ; R4 = 18 | 20 = 22
-0x14:    E0035004   AND R5, R3, R4                   ; R5 = 27 & 22 = 18  
-0x18:    E0855004   ADD R5, R5, R4                   ; R5 = 18 + 22 = 40
-0x1C:    E0558007   SUBS R8, R5, R7 (set flags)      ; R8 = 40 - 18 = 22, Z=0
-0x20:    0A00000C   BEQ END (shouldn't be taken)     ; Branch not taken (Z=0)
-0x24:    E0538004   SUBS R8, R3, R4 (set flags)      ; R8 = 27 - 22 = 5, Z=0  
-0x28:    AA000000   BGE AROUND (should be taken)     ; Branch taken (N=V=0)
-0x2C:    E2805000   ADD R5, R0, #0 (should be skipped) ; This instruction skipped
-0x30:    E0578002   SUBS R8, R7, R2 (set flags)      ; R8 = 18 - 20 = -2, N=1
-0x34:    B2857001   ADDLT R7, R5, #1                 ; R7 = 40 + 1 = 41 (N≠V, executed)
-0x38:    E0477002   SUB R7, R7, R2                   ; R7 = 41 - 20 = 21
-0x3C:    E5837054   STR R7, [R3, #84]                ; Memory[27+84] = Memory[111] = 21
-0x40:    E5902060   LDR R2, [R0, #96]                ; R2 = Memory[15+96] = Memory[111] = 21
-0x44:    E08FF000   ADD R15, R15, R0                 ; PC = PC + 8 + 15 (jump ahead)
-0x48:    E280200E   ADD R2, R0, #14                  ; R2 = 15 + 14 = 29
-0x4C:    EA000001   B +1 (always taken)              ; Unconditional branch forward
-0x50:    E280200D   ADD R2, R0, #13                  ; R2 = 15 + 13 = 28
-0x54:    E280200A   ADD R2, R0, #10                  ; R2 = 15 + 10 = 25  
-0x58:    E5802054   STR R2, [R0, #84]                ; Memory[15+84] = Memory[99] = final R2
+Address Hex Code Assembly Instruction Register Updates & Comments
+0x00: E04F000F SUB R0, R15, R15 ; R0 = 0
+0x04: E2802005 ADD R2, R0, #5 ; R2 = 5
+0x08: E280300C ADD R3, R0, #12 ; R3 = 12
+0x0C: E2437009 SUB R7, R3, #9 ; R7 = 3
+0x10: E1874002 ORR R4, R7, R2 ; R4 = 3 OR 5 = 7
+0x14: E0035004 AND R5, R3, R4 ; R5 = 12 AND 7 = 4
+0x18: E0855004 ADD R5, R5, R4 ; R5 = 4 + 7 = 11
+0x1C: E0558007 SUBS R8, R5, R7 (set flags) ; R8 = 11 - 3 = 8, set flags
+0x20: 0A00000C BEQ END (shouldn't be taken) ; Branch not taken
+0x24: E0538004 SUBS R8, R3, R4 (set flags) ; R8 = 12 - 7 = 5
+0x28: AA000000 BGE AROUND (should be taken) ; Branch taken
+0x2C: E2805000 ADD R5, R0, #0 (should be skipped) ; This instruction skipped
+0x30: E0578002 SUBS R8, R7, R2 (set flags) ; R8 = 3 - 5 = -2, set flags
+0x34: B2857001 ADDLT R7, R5, #1 ; R7 = 11 + 1 = 12 (executed)
+0x38: E0477002 SUB R7, R7, R2 ; R7 = 12 - 5 = 7
+0x3C: E5837054 STR R7, [R3, #84] ; Memory[12+84] = Memory = 7
+0x40: E5902060 LDR R2, [R0, #96] ; R2 = Memory[0+96] = Memory = 7
+0x44: E08FF000 ADD R15, R15, R0 ; PC = PC + 8 + 0 (no jump)
+0x48: E280200E ADD R2, R0, #14 ; shouldn't happen
+0x4C: EA000001 B END (always taken) ; Unconditional branch
+0x50: E280200D ADD R2, R0, #13 ; shouldn't happen
+0x54: E280200A ADD R2, R0, #10 ; shouldn't happen
+0x58: E5802054 STR R2, [R0, #84] ; Memory[0+84] = Memory = 7
 ```
 
 ### Program Flow Analysis
